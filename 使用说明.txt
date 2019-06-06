@@ -1,0 +1,13 @@
+1.服务端程序（用什么环境运行均可以，推荐用vscode）
+配置go运行环境，下载vscode（详情参照https://blog.csdn.net/guyan0319/article/details/78956957）
+
+2.安装android studio（http://www.android-studio.org/）
+
+3.将service代码导入vscode  
+打开new terminal 
+在service文件目录下 输入go build 编译代码 
+输入 .\service 运行代码
+
+4.将客户端代码test_app导入android studio 运行sdk版本在22以上的虚拟机
+
+这样客户端和服务端均运行了

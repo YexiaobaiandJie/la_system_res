@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <!--*********************-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView68"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="企发部意见"
+                    android:gravity="center"
+                    android:textSize="14dp"
+                    android:background="#fff"
+                    android:textColor="#42A5F5"/>
+
+                <TextView
+                    android:id="@+id/textView69"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="3"
+                    android:text="意见一：受益人定义不明确"
+                    android:textSize="17dp"
+                    android:gravity="center"
+                    android:background="#fff"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#c9c9c9"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView71"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="员工执行情况"
+                    android:background="#fff"
+                    android:textColor="#42A5F5"
+                    android:textSize="14dp"
+                    android:gravity="center"/>
+                <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:background="#fff">
+
+                <TextView
+                    android:id="@+id/textView70"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="不执行"
+                    android:textSize="17dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"/>
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c9c9c9"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"/>
+                <TextView
+                    android:id="@+id/textView170"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="定义人是明确的"
+                    android:textSize="17dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"/>
+            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:orientation="vertical"
+                    android:background="#fff">
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="同意不执行"
+                        android:paddingRight="5dp"
+                        android:id="@+id/agree"
+                        />
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="强制执行"
+                        android:paddingLeft="5dp"
+                        android:id="@+id/disagree"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--*********************-->
+
+</LinearLayout>

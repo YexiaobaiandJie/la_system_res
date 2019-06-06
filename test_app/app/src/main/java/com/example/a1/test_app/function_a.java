@@ -1,0 +1,189 @@
+package com.example.a1.test_app;
+
+import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
+
+
+public class function_a extends AppCompatActivity {
+
+    private String func="a";
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_function_a);
+        name = findViewById(R.id.user_name);
+        name.setText(Transmitter.userinfo.user_name);
+        dep = findViewById(R.id.user_dep);
+        String dep_num = Transmitter.userinfo.user_dep;
+        switch(dep_num){
+            case "100":
+                dep.setText("后勤部");
+                break;
+            case "101":
+                dep.setText("开发部");
+                break;
+            case "102":
+                dep.setText("营销部");
+                break;
+            case "103":
+                dep.setText("人力资源部");
+                break;
+            case "104":
+                dep.setText("企发部");
+                break;
+            case "110":
+                dep.setText("主管部");
+                break;
+            case "200":
+                dep.setText("经营科");
+                break;
+            case "201":
+                dep.setText("法务科");
+                break;
+            case "300":
+                dep.setText("管理员");
+                break;
+            case "900":
+                dep.setText("测试部");
+                break;
+        }
+
+        phone = findViewById(R.id.user_cellphone);
+        phone.setText(Transmitter.userinfo.user_cellphone);
+        c_phone = findViewById(R.id.chg_phone);
+        c_phone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转至修改电话界面
+                Intent intent_chg_phone = new Intent(function_a.this,change_phone.class);
+                intent_chg_phone.putExtra("func",func);
+                startActivity(intent_chg_phone);
+            }
+        });
+        email = findViewById(R.id.user_email);
+        email.setText(Transmitter.userinfo.user_email);
+        c_email = findViewById(R.id.chg_email);
+        c_email.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转至修改邮箱界面
+                Intent intent_chg_email = new Intent(function_a.this,change_email.class);
+                intent_chg_email.putExtra("func",func);
+                startActivity(intent_chg_email);
+            }
+        });
+        pwd = findViewById(R.id.changepwd);
+        pwd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转至修改密码界面
+                Intent intent_chg_pwd = new Intent(function_a.this,change_pwd.class);
+                intent_chg_pwd.putExtra("func",func);
+                startActivity(intent_chg_pwd);
+            }
+        });
+
+
+        textview_creaf = (TextView) this.findViewById(R.id.textView);
+        textview_creaf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(function_a.this,create_AF.class);
+                startActivity(intent);
+            }
+        });
+
+        textView_falist = (TextView) this.findViewById(R.id.textView2);
+        textView_falist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(function_a.this,AF_list.class);
+                startActivity(intent2);
+            }
+        });
+
+        textView_createdaf = (TextView) this.findViewById(R.id.textView7);
+        textView_createdaf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent3 = new Intent(function_a.this,createdaf.class);
+                startActivity(intent3);
+            }
+        });
+
+        textView_crelp = (TextView) this.findViewById(R.id.textView6);
+        textView_crelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent4 = new Intent(function_a.this,create_LP.class);
+                //Intent intent3 = new Intent(function_a.this,LP_info.class);
+                startActivity(intent4);
+            }
+        });
+
+        textView_crelp3 = (TextView) this.findViewById(R.id.textView4);
+        textView_crelp3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent5 = new Intent(function_a.this,create_LP3.class);
+                startActivity(intent5);
+            }
+        });
+
+
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.toolbar,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch(item.getItemId()){
+            case R.id.back_func:
+                //在此界面点击返回功能界面，返回功能界面
+
+                break;
+            case R.id.exit:
+                //在登录界面点击注销界面，返回登录界面
+                Intent intent_l = new Intent(function_a.this,FirstAcitivity.class);
+                startActivity(intent_l);
+                break;
+            default:
+        }
+        return true;
+    }
+
+
+
+
+
+    private TextView textview_creaf;//创建审批单
+    private TextView textView_falist;//审批单列表
+    private TextView textView_createdaf;//审批单草稿箱
+    private TextView textView_crelp;//创建单项法人委托
+    private TextView textView_crelp3;//创建常年法人委托
+    private LinearLayout layout_about;//关于我界面
+
+    private TextView name;//用户名
+    private TextView dep;//部门
+    private TextView phone;//电话
+    private TextView email;//邮箱
+    private LinearLayout pwd;//密码
+    private LinearLayout c_phone;//修改电话
+    private LinearLayout c_email;//修改邮箱
+
+}

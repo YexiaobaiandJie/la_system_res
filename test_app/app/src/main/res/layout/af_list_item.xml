@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:orientation="vertical"
+    android:elevation="2dp"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/af_list_item"
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="3dp"
+        android:elevation="3dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+
+            >
+            <TextView
+                android:drawableLeft="@mipmap/doc"
+                android:drawablePadding="5dp"
+                android:id="@+id/textView30"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:textSize="14dp"
+                android:text="上周企业法律相关报表申请"
+                android:textColor="#000"
+                />
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:padding="7dp"
+                android:drawableLeft="@mipmap/status"
+                android:textColor="#000"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#c9c9c9"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/textView29"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="14dp"
+                android:drawablePadding="7dp"
+                android:drawableLeft="@mipmap/type"
+                android:text="宋某"
+                android:textColor="#000"
+                />
+            <!-- android:text="宋某" -->
+
+
+            <TextView
+                android:id="@+id/textView27"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1.4"
+                android:textSize="14dp"
+                android:drawableLeft="@mipmap/time"
+                android:text="2017-03-05 12:52:62"
+                android:textColor="#000"/>
+            <!--android:text="2017-03-05" -->
+
+
+            <!--android:text="待处理"-->
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--android:text="部分员工月前离职薪资申请" -->
+
+
+
+
+</LinearLayout>
